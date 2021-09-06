@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Parallax</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">LOGO</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    
+    <section>
+        <img src="/stars (1).png" id="stars">
+        <img src="/moon (1).png" id="moon">
+        <img src="/mountains_behind (1).png" id="mountains_behind">
+        <h2 id="text">Moon Light</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="/mountains_front (1).png" id="mountains_front">
+    </section>
+
+    <div class="sec" id="sec">
+
+        <h2>parallax effect</h2>
+        <p>There are a number of benefits to using a parallax effect on your WordPress website. The first, and most obvious, is the visual aspect of a parallax effect. A parallax effect is aesthetically pleasing, giving your website a fresh, stylish and modern look and feel. This wow effect can make your content really pop, and creates an exciting and interesting browser experience.
+
+            Another key reason for using parallax effect on your site is to help break up a page, particularly a homepage, into readable chunks. Use this effect to emphasize the different sections and types of content you want to showcase. This can help promote different aspects of your website, illuminate important info, and encourage users to navigate your site and access content in a way of your choosing.
+            
+            Parallax effect can be used on any page or post of a website, but is most often seen on homepages, landing pages, or one-page sites. The stunning visuals parallax creates, and the positive effect it has on user experience, can result in visitors staying on your site longer, and help improve your site’s conversion rate goals.
+            
+            Considerations When Using Parallax
+            While there are benefits, there are a few key points you should keep in mind when adding parallax sections to your website.
+        </p>
+        
+    </div>
+
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 3 + 'px';
+            mountains_behind.style.top = value * 0.3 + 'px';
+            mountains_front.style.top = value *  + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            // text.style.marginTop = value * 1.5 + 'px';
+            // btn.style.marginTop = value * 1.5 + 'px';
+
+        })
+
+    </script>
+    
+</body>
+</html>
